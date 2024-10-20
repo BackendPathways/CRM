@@ -6,6 +6,7 @@ const sassMiddleware = require('sass-middleware');
 
 const { clientRouter } = require('./routers/client');
 const { homeRouter } = require('./routers/home');
+const errorHandler = require('./utils/errorHandler');
 
 const app = express();
 const PORT = 4000;
@@ -27,11 +28,6 @@ app.use(
 
 app.use(express.static('public'));
 
-
-
-app.use('/', homeRouter);
-app.use('/client', clientRouter);
-
 app.engine(
   '.hbs',
   hbs.engine({
@@ -42,6 +38,11 @@ app.engine(
 app.set('view engine', '.hbs');
 app.set('views', './views');
 
+app.use('/', homeRouter);
+app.use('/client', clientRouter);
+
+app.use(errorHandler);
+
 app.listen(PORT, 'localhost', () => {
-  console.log(`Nasłuchiwanie na porcie http://localhost:${PORT}`);
+  console.log(`App is listening on http://localhost:${PORT}`);
 });

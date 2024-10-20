@@ -47,7 +47,6 @@ class Db {
   }
 
   delete(id) {
-    // użyć filter
     this._data = this._data.filter((obj) => obj.id !== id);
     this._save();
   }
