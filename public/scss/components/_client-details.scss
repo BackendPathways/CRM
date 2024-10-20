@@ -1,0 +1,25 @@
+.client__table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.client__header {
+  background-color: #6e5e5e;
+  color: #fff;
+  padding: 10px;
+}
+
+.client__data {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.client__email-link {
+  color: #4a90e2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

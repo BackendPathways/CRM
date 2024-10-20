@@ -1,0 +1,46 @@
+.client-list {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  &__caption {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  &__header {
+    background-color: #6e5e5e;
+    color: #000; // Changed the font color here
+  }
+
+  &__row {
+    background-color: #f7f7f7;
+
+    &:nth-child(2n) {
+      background-color: #e9e9e9;
+    }
+  }
+
+  &__email, &__name, &__next-contact {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  &__email-link, &__name-link {
+    color: #4a90e2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__actions {
+    text-align: center;
+  }
+}
