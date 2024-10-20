@@ -1,3 +1,5 @@
+@use '../mixins/mixins';
+
 .client-list {
   width: 80%;
   margin: 0 auto;
@@ -26,12 +28,15 @@
     }
   }
 
-  &__email, &__name, &__next-contact {
+  &__email,
+  &__name,
+  &__next-contact {
     padding: 10px;
     border: 1px solid #ddd;
   }
 
-  &__email-link, &__name-link {
+  &__email-link,
+  &__name-link {
     color: #4a90e2;
     text-decoration: none;
 
@@ -43,4 +48,7 @@
   &__actions {
     text-align: center;
   }
+}
+.client-list__add-form {
+  @include mixins.center-flex;
 }

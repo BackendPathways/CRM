@@ -1,3 +1,5 @@
+@use '../mixins/mixins';
+
 .client__table {
   width: 80%;
   margin: 0 auto;
@@ -22,4 +24,7 @@
   &:hover {
     text-decoration: underline;
   }
+}
+.client__edit-form {
+  @include mixins.center-flex;
 }
