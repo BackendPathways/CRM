@@ -1,0 +1,52 @@
+<table class='client-list'>
+  <caption class='client-list__caption'><h2 class='client-list__title'>Client
+      List</h2></caption>
+  <thead class='client-list__header'>
+    <tr class='client-list__row'>
+      <th class='client-list__cell'>Email</th>
+      <th class='client-list__cell'>Name</th>
+      <th class='client-list__cell'>Next Contact</th>
+    </tr>
+  </thead>
+  <tbody class='client-list__body'>
+    {{#each clients}}
+      <tr class='client-list__row'>
+        <td class='client-list__email'>
+          <a
+            href='mailto:{{this.mail}}'
+            class='client-list__email-link'
+          >{{this.mail}}</a>
+        </td>
+        <td class='client-list__name'>
+          <a
+            href='/client/{{this.id}}'
+            class='client-list__name-link'
+          >{{this.name}}</a>
+        </td>
+        <td class='client-list__next-contact'>
+          {{this.nextContact}}
+        </td>
+        <td class='client-list__actions'>
+          <a
+            href='/client/{{this.id}}'
+            class='client-list__details-link'
+          >Details</a>
+          <form
+            method='POST'
+            action='/client/{{this.id}}?_method=DELETE'
+            class='client-list__delete-form'
+          >
+            <button
+              type='submit'
+              class='client-list__delete-button'
+            >Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<form method='GET' action='/client/form/add' class='client-list__add-form'>
+  <button type='submit' class='client-list__add-button'>Add a User</button>
+</form>

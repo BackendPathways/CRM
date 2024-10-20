@@ -1,0 +1,28 @@
+{
+  "name": "crm_projectrest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js",
+    "dev": "nodemon --watch ./views --watch ./public --ext js,json,scss,hbs,html index.js",
+    "build:css": "sass ./public/scss/styles.scss ./public/css/styles.css",
+    "watch:css": "sass --watch ./public/scss/styles.scss:./public/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "method-override": "^3.0.0",
+    "sass": "^1.69.4",
+    "sass-middleware": "^0.0.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.0.3"
+  }
+}

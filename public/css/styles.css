@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main__header {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 40px;
+}
+
+.client__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+  text-align: center;
+}
+.client__form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.client__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.client__label {
+  font-size: 1rem;
+  color: #333;
+}
+.client__input, .client__textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+.client__textarea {
+  height: 100px;
+}
+.client__button {
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.client__button:hover {
+  background-color: #357ab8;
+}
+.client__link {
+  color: #4a90e2;
+  text-decoration: none;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+.client__link:hover {
+  text-decoration: underline;
+}
+.client__paragraph {
+  text-align: center;
+  color: #4a4a4a;
+}
+.client__edit-form, .client__delete-form {
+  display: inline-block;
+  margin: 10px;
+}
+
+.client-list {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.client-list__caption {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.client-list__title {
+  font-size: 1.5rem;
+  color: #333;
+}
+.client-list__header {
+  background-color: #6e5e5e;
+  color: #333;
+}
+.client-list__row {
+  background-color: #f7f7f7;
+}
+.client-list__row:nth-child(2n) {
+  background-color: #e9e9e9;
+}
+.client-list__cell, .client-list__email, .client-list__next-contact {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.client-list__email-link, .client-list__name-link, .client-list__details-link {
+  color: #4a90e2;
+  text-decoration: none;
+}
+.client-list__email-link:hover, .client-list__name-link:hover, .client-list__details-link:hover {
+  text-decoration: underline;
+}
+.client-list__actions {
+  text-align: center;
+}
+.client-list__add-form {
+  margin: 20px auto;
+  text-align: center;
+}
+.client-list__add-button, .client-list__delete-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.client-list__add-button:hover, .client-list__delete-button:hover {
+  background-color: #357ab8;
+}
+
+.go-back__link {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+.go-back__link:hover {
+  background-color: #ddd;
+}
+
+.client__table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.client__header {
+  background-color: #6e5e5e;
+  color: #fff;
+  padding: 10px;
+}
+
+.client__data {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.client__email-link {
+  color: #4a90e2;
+  text-decoration: none;
+}
+.client__email-link:hover {
+  text-decoration: underline;
+}
+
+.client__edit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.client__edit-button:hover {
+  background-color: #357ab8;
+}
+
+/*# sourceMappingURL=styles.css.map */

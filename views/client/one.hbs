@@ -1,0 +1,30 @@
+<h2 class="client__title">{{client.name}}</h2>
+<table class="client__table">
+    <tbody class="client__body">
+        <tr class="client__row">
+            <th class="client__header">Email:</th>
+            <td class="client__data">
+                <a href="mailto:{{client.mail}}" class="client__email-link">{{client.mail}}</a>
+            </td>
+        </tr>
+        <tr class="client__row">
+            <th class="client__header">Name:</th>
+            <td class="client__data">{{client.name}}</td>
+        </tr>
+        <tr class="client__row">
+            <th class="client__header">Next Contact:</th>
+            <td class="client__data">{{client.nextContact}}</td>
+        </tr>
+        {{#if client.notes}}
+        <tr class="client__row">
+            <th class="client__header">Notes:</th>
+            <td class="client__data">{{client.notes}}</td>
+        </tr>
+        {{/if}}
+    </tbody>
+</table>
+
+<form method="GET" action="/client/form/editUser/{{client.id}}" class="client__edit-form">
+    <button type="submit" class="client__edit-button">Edit the User</button>
+</form>
+{{> go-back}}

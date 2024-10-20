@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// Main header styling
+.main__header {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 40px;
+}
+
+// Client form and elements
+.client {
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+    text-align: center;
+  }
+
+  &__form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__label {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  &__textarea {
+    height: 100px;
+  }
+
+  &__button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #357ab8;
+    }
+  }
+
+  &__link {
+    color: #4a90e2;
+    text-decoration: none;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    color: #4a4a4a;
+  }
+
+  &__edit-form,
+  &__delete-form {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+// Client list styling
+.client-list {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  &__caption {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  &__header {
+    background-color: #6e5e5e;
+    color: #333;
+  }
+
+  &__row {
+    background-color: #f7f7f7;
+    &:nth-child(2n) {
+      background-color: #e9e9e9;
+    }
+  }
+
+  &__cell,
+  &__email,
+  &__next-contact {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  &__email-link,
+  &__name-link,
+  &__details-link {
+    color: #4a90e2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__actions {
+    text-align: center;
+  }
+
+  &__add-form {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  &__add-button,
+  &__delete-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #357ab8;
+    }
+  }
+}
+
+// Go back link styling
+.go-back__link {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+// One client view styling
+.client__table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.client__header {
+  background-color: #6e5e5e;
+  color: #fff;
+  padding: 10px;
+}
+
+.client__data {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.client__email-link {
+  color: #4a90e2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.client__edit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #357ab8;
+  }
+}

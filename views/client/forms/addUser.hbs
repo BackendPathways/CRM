@@ -1,0 +1,44 @@
+<h2 class="client__title">Add a new user to the datebase</h2>
+
+<form method="POST" action="/client" class="client__form">
+    <label class="client__field">
+        <p class="client__label">
+            Email:
+        </p>
+        <p>
+            <input type="email" name="mail" class="client__input">
+        </p>
+    </label>
+
+    <label class="client__field">
+        <p class="client__label">
+            Name:
+        </p>
+        <p>
+            <input type="text" name="name" class="client__input">
+        </p>
+    </label>
+
+    <label class="client__field">
+        <p class="client__label">
+            Next contact:
+        </p>
+        <p>
+            <input type="date" name="nextContact" class="client__input">
+        </p>
+    </label>
+
+    <label class="client__field">
+        <p class="client__label">
+            Notes:
+        </p>
+        <p>
+            <textarea name="notes" class="client__textarea"></textarea>
+        </p>
+    </label>
+
+    <p>
+        <button type="submit" class="client__button">Submit</button>
+    </p>
+</form>
+{{>go-back}}
