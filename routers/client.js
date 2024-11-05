@@ -14,11 +14,6 @@ clientRouter
   .get('/:id', (req, res, next) => {
     try {
       const client = db.getOne(req.params.id);
-      if (!client) {
-        const error = new Error('Client not found');
-        error.statusCode = 404;
-        throw error;
-      }
       res.render('client/one', { client });
     } catch (err) {
       next(err);
@@ -34,7 +29,6 @@ clientRouter
         nextContact,
         notes,
       });
-      console.log(db._data);
       res.render('client/added', {
         name,
         id,
@@ -46,13 +40,6 @@ clientRouter
 
   .put('/:id', (req, res, next) => {
     try {
-      const client = db.getOne(req.params.id);
-      if (!client) {
-        const error = new Error('Client not found');
-        error.statusCode = 404;
-        throw error;
-      }
-
       db.update(req.params.id, req.body);
 
       res.render('client/modified', {
@@ -66,15 +53,9 @@ clientRouter
 
   .delete('/:id', (req, res, next) => {
     try {
-      const userId = req.params.id;
-      const deletedUser = db.getOne(userId);
+      const deletedUser = db.getOne(req.params.id);
 
-      if (!deletedUser) {
-        const error = new Error('Client not found');
-        error.statusCode = 404;
-        throw error;
-      }
-      db.delete(userId);
+      db.delete(req.params.id);
       res.render('client/deleted', {
         user: deletedUser,
       });
@@ -90,13 +71,9 @@ clientRouter
   .get('/form/editUser/:id', (req, res, next) => {
     try {
       const client = db.getOne(req.params.id);
-      if (!client) {
-        const error = new Error('Client not found');
-        error.statusCode = 404;
-        throw error;
-      }
+
       res.render('client/forms/EditUser', {
-        client: db.getOne(client),
+        client,
       });
     } catch (err) {
       next(err);
