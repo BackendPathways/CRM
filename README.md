@@ -4,20 +4,22 @@ This project was created around October 2023 as part of a learning exercise. The
 
 **Note**: This version is currently designed only for **desktop screens** and hasn't been optimized for mobile or responsive design.
 
-
 ## Project Overview
 
 The primary aim of the project was:
 - **Learning REST API** design and CRUD operations (Create, Read, Update, Delete).
 - **Understanding Express.js** for building server-side applications, especially how to pass parameters via URLs.
 - **Focusing on HTML forms**: Since forms traditionally support only GET and POST requests, I used the `method-override` library to simulate PUT and DELETE methods, allowing the full CRUD functionality from the frontend.
-  
+
+After a period of working on backend concepts, I revisited this project to **add comprehensive error handling** as part of my practice in managing server-side errors and enhancing code reliability. This modification was specifically aimed at practicing error handling and interception.
+
 ## Features
 - **CRUD Operations**: Users can create, update, read, and delete client information.
 - **Data Storage**: Client data is stored in `client.json` without using a full-fledged database.
 - **HTML Forms**: All the interactions, such as adding, editing, and deleting users, are performed through HTML forms. The form methods are extended to allow PUT and DELETE using `method-override`.
+- **Error Handling**: Thorough error-handling mechanisms were implemented to handle and display server-side errors effectively.
 - **SCSS Practice**: Even though SCSS wasn't necessary for this project, I used it to practice working with stylesheets and modular CSS.
-  
+
 ## Technologies Used
 - **Node.js**: Runtime environment for running the server.
 - **Express.js**: Framework used to build the RESTful API.
