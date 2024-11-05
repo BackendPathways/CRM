@@ -72,7 +72,7 @@ clientRouter
     try {
       const client = db.getOne(req.params.id);
 
-      res.render('client/forms/EditUser', {
+      res.render('client/forms/editUser', {
         client,
       });
     } catch (err) {
